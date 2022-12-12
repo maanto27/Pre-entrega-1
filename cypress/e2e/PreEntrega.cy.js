@@ -22,8 +22,8 @@ describe('PreEntrega', () => {
         productosData = data
       });
     });
-  
-    beforeEach('BeforeEach', () =>{
+
+    it('Verificar nombre, precio y el precio acumulado de los 2 productos' , () => {
       cy.visit('');
       registerPage.clickIniciaSesionButton();
       loginPage.escribirUsuario(loginData.login.username);
@@ -35,9 +35,6 @@ describe('PreEntrega', () => {
       productsPage.AgregarProducto(productosData.productos.producto2.name);
       productsPage.CerrarVentanaEmergente();
       productsPage.CarritoDeCompraButton();
-    });
-    
-    it('Verificar nombre, precio y el precio acumulado de los 2 productos' , () => {
       shoppingCartPage.VerificarProducto(productosData.productos.producto1.name).should('exist');
       shoppingCartPage.VerificarProducto(productosData.productos.producto2.name).should('exist');
       shoppingCartPage.VerificarProducto(productosData.productos.producto1.precio).should('exist');
