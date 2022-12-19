@@ -40,7 +40,7 @@ describe('PreEntrega', () => {
       shoppingCartPage.VerificarProducto(productosData.productos.producto1.precio).should('have.text' , '$18');
       shoppingCartPage.VerificarProducto(productosData.productos.producto2.precio).should('have.text' , '$30');
       shoppingCartPage.ClickShowTotalPriceButton();
-      shoppingCartPage.VerificarPrecioDeProductos(productosData.productos.producto1.precio + productosData.productos.producto2.precio).should('have.text', '48');
+      shoppingCartPage.VerificarPrecioDeProductos(productosData.productos.producto1.precio + productosData.productos.producto2.precio).should('have.text' , '48');
     });
 
   });

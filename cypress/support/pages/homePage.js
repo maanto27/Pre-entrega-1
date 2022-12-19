@@ -1,6 +1,6 @@
 export class HomePage {
     constructor () {
-        this.onlineshop = '#onlineshoplink'
+        this.onlineshop = '#onlineshoplink' , {timeout: 10000}
     };
 
     DarleClickAlBotonOnlineShop() {

@@ -11,7 +11,7 @@ export class ShoppingCartPage {
         cy.get(this.ShowTotalPriceButton).click();
     };
 
-    VerificarPrecioDeProductos(productos) {
-        return cy.contains(productos).siblings('#price')
+    VerificarPrecioDeProductos() {
+        return cy.get('#price')
     }
 };
