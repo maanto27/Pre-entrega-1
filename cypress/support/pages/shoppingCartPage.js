@@ -3,7 +3,11 @@ export class ShoppingCartPage {
         this.ShowTotalPriceButton = 'button[class="chakra-button css-15tuzzq"]'
     }
 
-    VerificarProducto(productos) {
+    VerificarNombre(productos) {
+        return cy.contains(productos);
+    };
+
+    VerificarPrecio(productos) {
         return cy.contains(productos);
     };
 
