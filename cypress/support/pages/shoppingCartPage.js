@@ -4,11 +4,11 @@ export class ShoppingCartPage {
     }
 
     VerificarNombre(productos) {
-        return cy.contains(productos).siblings('#productName');
+        return cy.contains(productos)
     };
 
     VerificarPrecio(productos) {
-        return cy.contains(productos).siblings('#productPrice');
+        return cy.get(`[name='${productos}']`).siblings('#productPrice');
     };
 
     ClickShowTotalPriceButton() {

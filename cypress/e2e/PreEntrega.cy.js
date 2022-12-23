@@ -35,10 +35,10 @@ describe('PreEntrega', () => {
       productsPage.AgregarProducto(productosData.productos.producto2.name);
       productsPage.CerrarVentanaEmergente();
       productsPage.CarritoDeCompraButton();
-      shoppingCartPage.VerificarNombre(productosData.productos.producto1.name).should('have.text' , 'Pink Sweater');
-      shoppingCartPage.VerificarNombre(productosData.productos.producto2.name).should('have.text' , 'White Shoes');
-      shoppingCartPage.VerificarPrecio(productosData.productos.producto1.precio).should('have.text' , '$18');
-      shoppingCartPage.VerificarPrecio(productosData.productos.producto2.precio).should('have.text' , '$30');
+      shoppingCartPage.VerificarNombre(productosData.productos.producto1.name).should('have.text' , 'White Shoes');
+      shoppingCartPage.VerificarNombre(productosData.productos.producto2.name).should('have.text' , 'Pink Sweater');
+      shoppingCartPage.VerificarPrecio(productosData.productos.producto1.name).should('have.text' , '$30');
+      shoppingCartPage.VerificarPrecio(productosData.productos.producto2.name).should('have.text' , '$18');
       shoppingCartPage.ClickShowTotalPriceButton();
       shoppingCartPage.VerificarPrecioDeProductos(productosData.productos.producto1.precio + productosData.productos.producto2.precio).should('have.text' , '48');
     });
